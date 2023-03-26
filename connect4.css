@@ -1,0 +1,75 @@
+/* game board table */
+/* I gave the background a color of blue to match the board game more closely */
+body {
+  background-color: blue;
+}
+
+/* I wanted to center the game in the window and have it scale proportionally based on the window size */
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#board {
+  width: 600px;
+  max-width: 90%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#board td {
+  width: calc(100% / 7);
+  padding-bottom: calc(100% / 7);
+  border: solid 3px #666;
+  position: relative;
+}
+
+.piece {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+/* #board td {
+ width: 600px;
+  height: 60px;
+  border: solid 1px #666;
+} */
+
+/* pieces are div within game table cells: draw as colored circles */
+
+/* .piece { */
+  /* TODO: make into circles */
+  /* margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+} */ 
+
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+/* I updated player 2 to yellow match the actual board game more closely. */
+.piece.p1 {
+  background-color: red;
+}
+
+.piece.p2 {
+  background-color: yellow;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 2px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
